@@ -64,7 +64,7 @@ ln -s /usr/share/phpmyadmin phpmyadmin
 ```bash
 cd /root/
 
-git clone git@github.com:Schlaumra/quarantaenie.git
+git clone https://github.com/Schlaumra/quarantaenie.git
 
 mysql -u root -p
 ```
