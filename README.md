@@ -21,7 +21,7 @@ Run as Root (`su -` or `sudo`):
 apt update
 apt upgrade
 
-apt install mariadb-server mariadb-client php7.4 php7.4-common php7.4-mysql apache2 phpmyadmin git -y
+apt install mariadb-server mariadb-client php7.4 php7.4-common php7.4-mysql apache2 phpmyadmin git make -y
 ```
 
 > Don't configure automatically for a webserver just click enter
@@ -71,14 +71,16 @@ mysql -u root -p
 > Enter password and then import the SQL file
 ```mysql
 SOURCE /root/quarantaenie/quarantaenie.sql;
+exit
 ```
 ### Set up application:
 ```bash
 cd /root/quarantaenie
 
 # Manual:
-cp -R source/* /var/www/html
+cp -R source/* /var/www/html  
 mkdir -p /etc/quarantaenie
+chown -R www-data:www-data /etc/quarantaenie/
 
 # Automatic
 make install
