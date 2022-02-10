@@ -70,7 +70,7 @@ mysql -u root -p
 ```
 > Enter password and then import the SQL file
 ```mysql
-SOURCE '/root/quarantaenie/quarantaenie.sql'
+SOURCE /root/quarantaenie/quarantaenie.sql;
 ```
 ### Set up application:
 ```bash

@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS quarantaenie;
 DROP USER IF EXISTS quarantine@localhost;
 
 CREATE DATABASE quarantaenie;
-CREATE USER quarantine@localhost IDENTIFIED BY 'Kennwort0!';
+CREATE USER quarantine@localhost IDENTIFIED BY 'Kennwort0';
 GRANT ALL PRIVILEGES ON quarantaenie.* TO quarantine@localhost;
 
 USE quarantaenie;
