@@ -1,0 +1,253 @@
+:root {
+    --main-color: #0466c8;
+    --main-highlight-color: #0f2b72;
+    --secondary-color: #d5fbfc;
+    --secondary-highlight-color: #b3fafa;
+    --invalid-color: #cc1e2b;
+    --attention-color: #ffeedb;
+    --default-font-color: black;
+    --clickable-font: var(--main-color);
+    --clickable-highlight-font: var(--main-highlight-color);
+
+    --defaul-margin: 1rem;
+
+    font-size: 1.5em;
+    font-family: "DejaVu Sans", monospace;
+    color: var(--default-font-color);
+}
+
+body {
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.table-wrapper {
+    margin: 1rem;
+    width: 80%;
+}
+
+.big-table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.big-table th, .big-table td {
+    border: 1px solid black;
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+
+.big-table th {
+    background: var(--main-color);
+    color: white;
+}
+
+.big-table tbody tr:hover {
+    background: var(--secondary-color);
+}
+
+.cell-clickable:hover {
+    background: var(--secondary-highlight-color);
+}
+
+.table-icon-box {
+    display: flex;
+    justify-content: space-evenly;
+    border: none;
+}
+
+.table-icon {
+    width: 2rem;
+}
+
+.links {
+    flex-grow: 1;
+    margin: 0 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.links > a {
+    color: var(--clickable-font);
+    text-decoration-line: initial;
+    font-weight: bolder;
+    transition: all 0.4s ease-out 10ms
+}
+
+.links > a:hover {
+    color: var(--clickable-highlight-font);
+    text-decoration-line: underline;
+}
+
+.header-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: white;
+    box-shadow: 0 0 0.3rem 0 gray;
+    margin-bottom: 3rem;
+}
+
+.logo  {
+    width: 15rem;
+    margin: var(--defaul-margin);
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+    margin: var(--defaul-margin);
+}
+
+.exit-icon {
+    width: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.login-form-wrap {
+    background-color: white;
+    width: 30%;
+    margin: 3rem auto;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.2);
+}
+
+.login-form {
+    border-top: 0.01rem solid rgba(0, 0, 0, 0.2) ;
+    text-align: left;
+    padding-top: 1rem;
+}
+
+.login-form > label {
+    font-size: 1.3rem;
+}
+
+select,
+input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 4px;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+input[type="password"] {
+    width: 100%;
+    padding: 0 0 0 0.5rem;
+    margin: 1rem 0;
+    color: #4f4f4f;
+    border: 1px solid #c2c0ca;
+    font-style: normal;
+    font-size: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    display: inline-block;
+    background: none;
+}
+input[type="text"]:focus:invalid,
+input[type="date"]:focus:invalid,
+select,
+input[type="password"]:focus:invalid {
+    border-color: var(--invalid-color);
+}
+
+input[type="submit"] {
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+input[type="submit"]:hover {
+    background-color: var(--main-highlight-color);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.table-preface {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.table-preface-overview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.overview-icons {
+    margin-left: 1rem;
+}
+
+.button-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    background: var(--main-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: white;
+    text-decoration-line: none;
+}
+
+.button:hover {
+    background: var(--main-highlight-color);
+}
+
+.quarantine {
+    background-color: var(--attention-color);
+}
+
+@media screen and (max-width: 1700px){
+    :root {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    :root {
+        font-size: 0.7em;
+    }
+    .table-wrapper {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    :root {
+        font-size: 1.7em;
+        overflow: scroll;
+    }
+    .table-wrapper {
+        width: 100%;
+    }
+}
