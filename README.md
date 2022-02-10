@@ -86,6 +86,15 @@ chown -R www-data:www-data /etc/quarantaenie/
 make install
 ```
 
+## Use example data:
+```bash
+mysql -u root -p
+```
+> Enter password and then import the SQL file
+```mysql
+SOURCE /root/quarantaenie/quarantaenieData.sql;
+exit
+```
 ## Change the credentials
 - Open [bcrypt.online](https://bcrypt.online/)
 - Enter desired password
