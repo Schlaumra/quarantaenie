@@ -21,7 +21,7 @@ Run as Root (`su -` or `sudo`):
 apt update
 apt upgrade
 
-apt install mariadb-server mariadb-client php7.4 php7.4-common php7.4-mysql apache2 phpmyadmin -y
+apt install mariadb-server mariadb-client php7.4 php7.4-common php7.4-mysql apache2 phpmyadmin git -y
 ```
 
 > Don't configure automatically for a webserver just click enter
@@ -77,7 +77,7 @@ SOURCE /root/quarantaenie/quarantaenie.sql;
 cd /root/quarantaenie
 
 # Manual:
-cp -R source/* /var/www/html  
+cp -R source/* /var/www/html
 mkdir -p /etc/quarantaenie
 
 # Automatic
