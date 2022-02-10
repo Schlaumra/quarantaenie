@@ -12,7 +12,7 @@ use Generator;
  *********************************/
 const dbName = 'quarantaenie';
 const dbUser = 'quarantine';
-const dbPassword = 'Kennwort0!';
+const dbPassword = 'Kennwort0';
 const dbHost = 'localhost';
 const dbPort = 3307;
 
